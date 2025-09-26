@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>🎬 Movie Hub</h1>
+    <nav>
+      <button onclick="showSection('results')">Search</button>
+      <button onclick="showSection('popular')">Popular</button>
+      <button onclick="showSection('myReviews')">My Reviews</button>
+      <button onclick="logout()">Logout</button>
+      <button id="themeToggle" onclick="toggleTheme()">🌙</button>
+    </nav>
+  </header>
+
+  <!-- Search Section -->
+  <section id="results" class="active">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for movies...">
+      <button onclick="searchMovies()">Search</button>
+    </div>
+    <h2>Search Results</h2>
+    <div id="movies" class="movie-list"></div>
+  </section>
+
+  <!-- Popular Movies Section -->
+  <section id="popular">
+    <h2>🔥 Popular Movies</h2>
+    <div id="popularMovies" class="movie-list"></div>
+  </section>
+
+  <!-- My Reviews Section -->
+  <section id="myReviews">
+    <h2>📝 My Reviews</h2>
+    <div id="reviewList" class="movie-list"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
